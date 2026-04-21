@@ -1,0 +1,16 @@
+langchain-core
+langchain-community
+faiss-cpu
+sentence-transformers
+groq
+python-dotenv
+numpy
+fastapi 
+uvicorn
+pydantic 
+python-dotenv
+langchain-qdrant 
+qdrant-client
+fastapi 
+uvicorn
+pydantic
