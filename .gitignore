@@ -1,1 +1,11 @@
-/venv
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+
+# Logs
+logs/
+
+# App init (if you really want to ignore it)
+app/__init__.py
