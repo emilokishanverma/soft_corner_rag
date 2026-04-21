@@ -62,3 +62,6 @@ def ask_question(request: QueryRequest):
             status_code=500,
             content={"error_code": "UNKNOWN_ERROR", "message": str(e)}
         )
+@app.get("/health")
+def health_check():
+    return {"status":"running"}
