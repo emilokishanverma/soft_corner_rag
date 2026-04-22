@@ -1,21 +1,16 @@
 # 📌 Soft Corner RAG API (Qdrant + Groq)
 
+---
+
 ## 🚀 Overview
 
 This project is a **Retrieval-Augmented Generation (RAG) API** built using:
 
 * **FastAPI** → API layer
 * **Qdrant** → Vector database
-* **HuggingFace Embeddings** → Text → Vector conversion
+* **SentenceTransformers (`all-MiniLM-L6-v2`)** → Text → Vector conversion
 * **Groq (LLM)** → Answer generation
 * **Custom Logger + Exceptions** → Production-style error handling
-
-It allows you to:
-
-* Ingest data from JSON
-* Store embeddings in Qdrant
-* Retrieve relevant context
-* Generate grounded answers using an LLM
 
 ---
 
@@ -28,7 +23,7 @@ User Question
    ↓
 FastAPI (/ask)
    ↓
-Embedding Model
+Embedding Model (MiniLM)
    ↓
 Qdrant Search (query_points)
    ↓
@@ -49,15 +44,13 @@ Final Answer
 
 * ❌ **NO LangChain Retriever used**
 * ✅ **Direct Qdrant retrieval used**
+* ✅ **Same embedding model used for ingestion and query**
+* ✅ Lightweight embedding model: `all-MiniLM-L6-v2`
+* ✅ Data source:
 
-  ```python
-  qdrant_client.query_points(...)
-  ```
-* ✅ Data is loaded from:
-
-  ```bash
-  data/soft_corner_rag_corpus.json
-  ```
+```bash
+data/soft_corner_rag_corpus.json
+```
 
 ---
 
@@ -68,9 +61,9 @@ app/
 │
 ├── config.py          # Environment & config loader
 ├── logger.py          # Logging system
-├── exceptions.py      # Custom exception classes
+├── exception.py       # Custom exception classes
 ├── error_utils.py     # Error context helper
-├── embeddings.py      # Embedding model loader
+├── embeddings.py      # Embedding model (MiniLM)
 ├── ingestion.py       # JSON → Qdrant ingestion
 ├── vectorstore.py     # Qdrant client
 ├── retriever.py       # Direct Qdrant retrieval
@@ -87,15 +80,43 @@ run.py                 # App runner
 
 ## ⚙️ Setup
 
-### 1. Install dependencies
+### 1. Create Virtual Environment (Recommended)
+
+#### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### Mac/Linux
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+---
+
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
+Required packages include:
+
+* fastapi
+* uvicorn
+* python-dotenv
+* groq
+* qdrant-client
+* sentence-transformers
+* pydantic
+
 ---
 
-### 2. Start Qdrant (Docker)
+### 3. Start Qdrant (Docker)
 
 ```bash
 docker run -p 6333:6333 qdrant/qdrant
@@ -103,7 +124,7 @@ docker run -p 6333:6333 qdrant/qdrant
 
 ---
 
-### 3. Configure `.env`
+### 4. Configure `.env`
 
 ```env
 GROQ_API_KEY=your_api_key
@@ -111,14 +132,12 @@ GROQ_API_KEY=your_api_key
 QDRANT_URL=http://localhost:6333
 QDRANT_COLLECTION=soft_corner_docs
 
-EMBEDDING_MODEL_NAME=BAAI/bge-small-en-v1.5
+GROQ_MODEL=llama-3.3-70b-versatile
 
 TOP_K=6
 MIN_SCORE=0.0
 
 JSON_DATA_PATH=data/soft_corner_rag_corpus.json
-
-GROQ_MODEL=llama-3.3-70b-versatile
 
 LOG_FILE=logs/app.log
 ```
@@ -127,13 +146,13 @@ LOG_FILE=logs/app.log
 
 ## 📥 Data Ingestion
 
-Place your file here:
+Place your data file here:
 
 ```bash
 data/soft_corner_rag_corpus.json
 ```
 
-### Format:
+### JSON Format
 
 ```json
 [
@@ -148,17 +167,20 @@ data/soft_corner_rag_corpus.json
 
 ---
 
-### Run ingestion API
+### ▶️ Run Local Ingestion
 
 ```bash
-POST /ingest
+python local_ingest.py
 ```
 
 This will:
 
 * Read JSON
-* Generate embeddings
-* Store in Qdrant
+* Generate embeddings using `all-MiniLM-L6-v2`
+* Store vectors in Qdrant
+
+⚠️ **Note:**
+`recreate_collection()` will delete previous data.
 
 ---
 
@@ -188,11 +210,33 @@ POST /ask
 
 ---
 
-## 🧾 Prompt Used
+## 🌐 API Access
 
-The system uses a strict RAG prompt:
+### Base URL
 
-* Only answers from context
+```bash
+http://127.0.0.1:5000
+```
+
+### Health Check
+
+```bash
+http://127.0.0.1:5000/health
+```
+
+### Swagger Docs
+
+```bash
+http://127.0.0.1:5000/docs
+```
+
+---
+
+## 🧾 Prompt Behavior
+
+The system follows strict RAG rules:
+
+* Answers ONLY from provided context
 * No hallucination
 * If not found:
 
@@ -202,55 +246,48 @@ The system uses a strict RAG prompt:
 
 ## 🛠 Features
 
-* ✅ Direct Qdrant retrieval
-* ✅ Custom logging system
-* ✅ Structured error handling
+* ✅ Direct Qdrant retrieval (`query_points`)
+* ✅ Lightweight embedding model
+* ✅ No LangChain dependency
 * ✅ Modular architecture
-* ✅ Config-driven system
-* ✅ JSON ingestion pipeline
+* ✅ Custom logging system
+* ✅ Structured exception handling
 * ✅ Clean separation of concerns
 
 ---
 
 ## ⚠️ Notes
 
-* `recreate_collection()` will **delete old data**
-* Use carefully in production
-* `TOP_K` controls number of retrieved docs
+* `TOP_K` controls number of retrieved documents
 * `MIN_SCORE` filters weak matches
-
----
-
-## 🔥 Future Improvements
-
-* Add reranking
-* Add source citations
-* Streaming responses
-* Async API
-* Hybrid search (keyword + vector)
+* Embedding model is loaded once and reused
+* Ensure Qdrant is running before API start
 
 ---
 
 ## 🧠 Summary
 
-* `.env` → stores values
-* `config.py` → loads values
-* Qdrant → stores embeddings
-* Retriever → fetches relevant docs
-* Groq → generates answers
+* `.env` → stores config values
+* `config.py` → loads config
+* `SentenceTransformer` → creates embeddings
+* `Qdrant` → stores vectors
+* `Retriever` → fetches relevant docs
+* `Groq` → generates answers
 
 ---
 
 ## 🟢 Run the Server
 
-```bash
-python run.py
+Make sure your `run.py` contains:
+
+```python
+uvicorn.run("app.main:app", host="127.0.0.1", port=5000, reload=True)
 ```
 
-Open:
+Start server:
 
 ```bash
-http://127.0.0.1:8000/docs
+python run.py
 ```
 
 ---
@@ -259,9 +296,10 @@ http://127.0.0.1:8000/docs
 
 Your RAG API is now:
 
-* clean
-* modular
-* production-ready (structure-wise)
-* and fully understandable
+* ✅ Lightweight
+* ✅ Modular
+* ✅ No heavy dependencies
+* ✅ Production-ready (structure-wise)
+* ✅ Easy to deploy
 
 ---
