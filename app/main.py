@@ -62,6 +62,6 @@ def ask_question(request: QueryRequest):
             status_code=500,
             content={"error_code": "UNKNOWN_ERROR", "message": str(e)}
         )
-@app.get("/health")
+@app.get("/api/softcorner/chatbot/health")
 def health_check():
     return {"status":"running"}

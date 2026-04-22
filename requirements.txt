@@ -1,7 +1,13 @@
-fastapi
-uvicorn
+fastapi==0.110.0
+uvicorn==0.29.0
 python-dotenv
 groq
 qdrant-client
-sentence-transformers
-pydantic
+
+sentence-transformers==2.2.2
+transformers==4.36.2
+
+huggingface-hub==0.20.3
+
+numpy==1.26.4
+pydantic==2.6.4
