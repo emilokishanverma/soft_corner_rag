@@ -1,0 +1,518 @@
+[
+  {
+    "id": "soft_corner_feature_1",
+    "page_content": "Feature: Express Without Regrets. Description: Never let your feelings go unsaid. Express emotions privately without pressure or embarrassment. Benefits: Private expression, no fear of rejection, safe emotional space.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Express Without Regrets",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_2",
+    "page_content": "Feature: Maximum Privacy. Description: Your space is completely secure with multiple layers of protection. Benefits: Mandatory passcode every time, screenshot-proof, no sharing or downloading, hidden from main app.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Maximum Privacy",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_3",
+    "page_content": "Feature: Store Memories Forever. Description: Save and cherish special moments that last a lifetime. Benefits: Photos and videos, daily notes and Shayari, special days calendar, family memories.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Store Memories Forever",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_4",
+    "page_content": "Feature: Private Chat. Description: Dedicated private messaging exclusively for you and your partner. Benefits: End-to-end privacy, no screenshots, only for matched couples.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Private Chat",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_5",
+    "page_content": "Feature: Plan Dates Together. Description: Coordinate romantic dates with mutual planning features. Benefits: Select time and place, activity suggestions, shared reminders, mutual confirmation.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Plan Dates Together",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_6",
+    "page_content": "Feature: Gifting Options. Description: Surprise your partner with curated gift suggestions. Benefits: Curated options, special occasions, easy surprises.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Gifting Options",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_7",
+    "page_content": "Feature: Smart Matchmaking. Description: Connect when both are ready with intelligent commitment-based rules. Benefits: Partial matchmaking when both add each other, confirmed after 24 hours, unlock couple features, life partner option.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Smart Matchmaking",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_8",
+    "page_content": "Feature: Privacy Controls. Description: Complete control over your identity and visibility. Benefits: Set nicknames, change profile picture, use avatars, block suggestions from specific people.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Privacy Controls",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_9",
+    "page_content": "Feature: Life Partner Feature. Description: Take your relationship to the next level when you're ready. Benefits: Optional commitment feature, available after confirmed matchmaking, mutual agreement required.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Life Partner Feature",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_feature_10",
+    "page_content": "Feature: Your Privacy is Our Priority. Description: Multiple layers of security ensure your memories and feelings stay private. Security features: Passcode protected, no screenshots, hidden access, secure deletion.",
+    "metadata": {
+      "document_id": "soft_corner_features",
+      "document_type": "feature",
+      "feature_type": "application_feature",
+      "title": "Your Privacy is Our Priority",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_1",
+    "page_content": "Step 1: Set Up Your Passcode. Create a secure passcode to protect your Soft Corner. You will need it every time you access it. Tips: Choose a memorable but secure code, do not share your passcode, required every time you open Soft Corner.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "Set Up Your Passcode",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_2",
+    "page_content": "Step 2: Add Someone Special. Search for the person you want to connect with using their name or username. Tips: If registered, add directly. If not registered, they receive a notification. You can add only one person at a time.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "Add Someone Special",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_3",
+    "page_content": "Step 3: Wait for Matchmaking. When both users add each other, partial matchmaking is created instantly. Confirmation happens after 24 hours and unlocks all couple features.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "Wait for Matchmaking",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_4",
+    "page_content": "Step 4: Store Your Memories. Save photos, videos, notes, and special moments together. You can upload media, write daily notes or Shayari, mark special days, and create a shared gallery.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "Store Your Memories",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_5",
+    "page_content": "Step 5: Connect and Plan Together. Use private chat, plan dates, and explore gifting options. Includes screenshot-proof chat, planning dates, sending gifts, and sharing daily moments.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "Connect & Plan Together",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_6",
+    "page_content": "Before matchmaking, users can use Soft Corner for personal journaling. They can save personal notes, write daily feelings or Shayari, store private memories, and add special days. They cannot see or share content with another person until matchmaking is confirmed.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "Before Matchmaking Usage",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_usage_7",
+    "page_content": "After matchmaking, all couple features become available. Users can share memories including photos, videos, and notes, use private chat, enable the life partner feature, send gifts, plan dates, and access a shared gallery with special days.",
+    "metadata": {
+      "document_id": "soft_corner_usage",
+      "document_type": "feature",
+      "feature_type": "application_usage",
+      "title": "After Matchmaking Usage",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_1",
+    "page_content": "Important time rules in Soft Corner are designed to ensure commitment and protect emotions.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Important Time Rules",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_2",
+    "page_content": "Editing rules for the added person in Soft Corner are time-based. Users cannot change the person they added randomly.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Editing Rules for Added Person",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_3",
+    "page_content": "When a user adds someone for the first time in Soft Corner, they can change it within 24 hours.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Add Someone First Input Rule",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_4",
+    "page_content": "After the second input or first edit in Soft Corner, the next edit is allowed only after 72 hours.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Second Input Edit Rule",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_5",
+    "page_content": "After the third input or second edit in Soft Corner, editing opens after 96 hours from the first input.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Third Input Edit Rule",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_6",
+    "page_content": "After the fourth input or third edit in Soft Corner, further edits are allowed only after 7 days from the last edit.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Fourth Input Edit Rule",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_7",
+    "page_content": "These rules exist to reduce random changes, protect emotions, and maintain commitment and seriousness in relationships.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Why These Rules Exist",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_8",
+    "page_content": "When a user removes someone in Soft Corner, a 24-hour grace period starts. During this time, data is hidden for both users.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Removal Grace Period",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_9",
+    "page_content": "During the 24-hour grace period after removing someone in Soft Corner, the user can cancel the removal. If cancelled, all data becomes visible again.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Cancel Removal Rule",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_10",
+    "page_content": "After 24 hours, removal becomes permanent in Soft Corner. Matchmaking ends and all posts, notes, photos, and videos are permanently deleted.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Permanent Deletion Rule",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_important_rule_11",
+    "page_content": "Warning: Deleted data cannot be recovered. Both users will receive notifications for every action.",
+    "metadata": {
+      "document_id": "soft_corner_important_rules",
+      "document_type": "rule",
+      "feature_type": "important_rule",
+      "title": "Deletion Warning",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_1",
+    "page_content": "Step 1: You Add Someone. Search and add the person you want to connect with using their name or username. If they are registered, you can add them directly. If not, they receive a notification to join. You can change your selection within 24 hours.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "You Add Someone",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_2",
+    "page_content": "Step 2: They Add You Back. The other person must also add you to their Soft Corner. Both users must add each other for matchmaking to proceed. This step has no time limit.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "They Add You Back",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_3",
+    "page_content": "Step 3: Partial Matchmaking Created. When both users add each other, partial matchmaking is created instantly. A 24-hour waiting period begins. Limited features are available during this time and either user can cancel or remove the connection.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "Partial Matchmaking Created",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_4",
+    "page_content": "Step 4: Confirmed Matchmaking. After 24 hours, if neither user removes the other, matchmaking is confirmed. All couple features become available and users can proceed to the Life Partner stage.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "Confirmed Matchmaking",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_5",
+    "page_content": "Life Partner is an optional feature available after confirmed matchmaking. It requires mutual agreement and represents a serious level of commitment between users.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "Life Partner Feature",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_6",
+    "page_content": "Partial Matchmaking is the initial stage that begins instantly when both users add each other. It includes a 24-hour waiting period, allows either user to remove the connection, and provides limited feature access.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "Partial Matchmaking Stage",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_7",
+    "page_content": "Confirmed Matchmaking occurs after 24 hours if neither user removes the other. At this stage, all couple features unlock and users gain full access to the platform features together.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking",
+      "document_type": "feature",
+      "feature_type": "application_logic",
+      "title": "Confirmed Matchmaking Stage",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_feature_1",
+    "page_content": "Before confirmed matchmaking, users can access personal notes, daily feelings or Shayari, private memories, and personal special days. Shared memories, private chat, date planner, and gifting are locked until confirmed matchmaking.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking_features",
+      "document_type": "feature",
+      "feature_type": "matchmaking_feature",
+      "title": "Before Confirmed Matchmaking Features",
+      "app_section": "soft_corner",
+      "available_features": [
+        "Personal notes",
+        "Daily feelings/Shayari",
+        "Private memories",
+        "Special days (personal)"
+      ],
+      "locked_features": [
+        "Shared memories",
+        "Private chat",
+        "Date planner",
+        "Gifting"
+      ]
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_feature_2",
+    "page_content": "After confirmed matchmaking, users can access shared gallery, private chat, date planner, gifting options, Life Partner feature, and shared special days.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking_features",
+      "document_type": "feature",
+      "feature_type": "matchmaking_feature",
+      "title": "After Confirmed Matchmaking Features",
+      "app_section": "soft_corner",
+      "available_features": [
+        "Shared gallery",
+        "Private chat",
+        "Date planner",
+        "Gifting options",
+        "Life Partner feature",
+        "Shared special days"
+      ],
+      "locked_features": []
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_feature_3",
+    "page_content": "Partial matchmaking is created instantly when both users add each other. It is the first step toward building a connection.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking_features",
+      "document_type": "feature",
+      "feature_type": "matchmaking_feature",
+      "title": "About Partial Matchmaking",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_feature_4",
+    "page_content": "Confirmed matchmaking happens after 24 hours of partial matchmaking if neither user changes or removes the other. All couple features then unlock automatically.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking_features",
+      "document_type": "feature",
+      "feature_type": "matchmaking_feature",
+      "title": "About Confirmed Matchmaking",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_matchmaking_feature_5",
+    "page_content": "The Life Partner feature is optional and becomes available only after confirmed matchmaking. It allows couples to signify commitment to marriage or a long-term future together.",
+    "metadata": {
+      "document_id": "soft_corner_matchmaking_features",
+      "document_type": "feature",
+      "feature_type": "matchmaking_feature",
+      "title": "About Life Partner Feature",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_privacy_feature_1",
+    "page_content": "Your privacy is a top priority in Soft Corner. Multiple layers of security ensure that your memories and feelings remain completely private.",
+    "metadata": {
+      "document_id": "soft_corner_privacy_features",
+      "document_type": "feature",
+      "feature_type": "privacy_feature",
+      "title": "Privacy Overview",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_privacy_feature_2",
+    "page_content": "Soft Corner is protected by a passcode. Users must enter a secure passcode every time they access their private space.",
+    "metadata": {
+      "document_id": "soft_corner_privacy_features",
+      "document_type": "feature",
+      "feature_type": "privacy_feature",
+      "title": "Passcode Protection",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_privacy_feature_3",
+    "page_content": "Soft Corner prevents screenshots to protect user privacy and ensure that private content cannot be captured or shared.",
+    "metadata": {
+      "document_id": "soft_corner_privacy_features",
+      "document_type": "feature",
+      "feature_type": "privacy_feature",
+      "title": "No Screenshots",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_privacy_feature_4",
+    "page_content": "Soft Corner uses hidden access, making the feature discreet and not easily visible within the main app interface.",
+    "metadata": {
+      "document_id": "soft_corner_privacy_features",
+      "document_type": "feature",
+      "feature_type": "privacy_feature",
+      "title": "Hidden Access",
+      "app_section": "soft_corner"
+    }
+  },
+  {
+    "id": "soft_corner_privacy_feature_5",
+    "page_content": "Soft Corner ensures secure deletion of data, meaning that when data is removed, it cannot be recovered later.",
+    "metadata": {
+      "document_id": "soft_corner_privacy_features",
+      "document_type": "feature",
+      "feature_type": "privacy_feature",
+      "title": "Secure Deletion",
+      "app_section": "soft_corner"
+    }
+  }
+]

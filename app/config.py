@@ -11,7 +11,6 @@ try:
     QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "soft_corner_docs")
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
     GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-    EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "BAAI/bge-small-en-v1.5")
     TOP_K = int(os.getenv("TOP_K", "6"))
     MIN_SCORE = float(os.getenv("MIN_SCORE", "0.0"))
     JSON_DATA_PATH = os.getenv("JSON_DATA_PATH", "data/soft_corner_rag_corpus.json")

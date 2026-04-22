@@ -1,28 +1,48 @@
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from app.config import EMBEDDING_MODEL_NAME
+from sentence_transformers import SentenceTransformer
+
 from app.logger import get_logger
 from app.exception import ConfigurationException
 from app.error_utils import raise_custom_error
 
 logger = get_logger(__name__)
 
+_model = None
 
-def get_embedding_model() -> HuggingFaceEmbeddings:
+
+def get_embedding_model() -> SentenceTransformer:
+    global _model
+
     try:
-        if not EMBEDDING_MODEL_NAME:
+        if _model is None:
+            logger.info("Loading embedding model: all-MiniLM-L6-v2")
+            _model = SentenceTransformer("all-MiniLM-L6-v2")
+
+        return _model
+
+    except Exception as e:
+        logger.exception("Failed to load embedding model")
+        raise_custom_error(ConfigurationException, "Failed to load embedding model", e)
+
+
+def embed_text(text: str) -> list[float]:
+    try:
+        if not text or not text.strip():
             raise ConfigurationException(
-                "EMBEDDING_MODEL_NAME is missing.",
+                "Text cannot be empty for embedding.",
                 module=__name__,
-                function="get_embedding_model",
+                function="embed_text",
                 file_name=__file__,
                 line_number=0,
             )
 
-        logger.info("Loading embedding model: %s", EMBEDDING_MODEL_NAME)
-        return HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
+        model = get_embedding_model()
+        vector = model.encode(text).tolist()
+
+        logger.info("Embedding generated successfully")
+        return vector
 
     except ConfigurationException:
         raise
     except Exception as e:
-        logger.exception("Failed to load embedding model")
-        raise_custom_error(ConfigurationException, "Failed to load embedding model", e)
+        logger.exception("Failed to generate embedding")
+        raise_custom_error(ConfigurationException, "Failed to generate embedding", e)

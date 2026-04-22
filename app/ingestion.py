@@ -1,11 +1,10 @@
 import json
-from typing import List
+from typing import List, Dict, Any
 
-from langchain_core.documents import Document
 from qdrant_client import models
 
 from app.config import JSON_DATA_PATH, QDRANT_COLLECTION
-from app.embeddings import get_embedding_model
+from app.embeddings import embed_text
 from app.vectorstore import get_qdrant_client
 from app.logger import get_logger
 from app.exception import IngestionException
@@ -14,21 +13,21 @@ from app.error_utils import raise_custom_error
 logger = get_logger(__name__)
 
 
-def load_documents_from_json(path: str = JSON_DATA_PATH) -> List[Document]:
+def load_documents_from_json(path: str = JSON_DATA_PATH) -> List[Dict[str, Any]]:
     try:
         logger.info("Loading JSON data from: %s", path)
 
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        documents: List[Document] = []
+        documents: List[Dict[str, Any]] = []
         for item in data:
             try:
                 documents.append(
-                    Document(
-                        page_content=item["page_content"],
-                        metadata=item.get("metadata", {})
-                    )
+                    {
+                        "page_content": item["page_content"],
+                        "metadata": item.get("metadata", {})
+                    }
                 )
             except KeyError as e:
                 logger.warning("Skipping invalid item, missing key: %s", str(e))
@@ -62,10 +61,9 @@ def ingest_documents(path: str = JSON_DATA_PATH) -> str:
                 line_number=0,
             )
 
-        embedding_model = get_embedding_model()
         qdrant_client = get_qdrant_client()
 
-        sample_vector = embedding_model.embed_query("test")
+        sample_vector = embed_text("test")
         vector_size = len(sample_vector)
 
         logger.info("Recreating Qdrant collection: %s", QDRANT_COLLECTION)
@@ -79,10 +77,10 @@ def ingest_documents(path: str = JSON_DATA_PATH) -> str:
 
         points = []
         for idx, doc in enumerate(documents):
-            vector = embedding_model.embed_query(doc.page_content)
+            vector = embed_text(doc["page_content"])
             payload = {
-                "page_content": doc.page_content,
-                **doc.metadata
+                "page_content": doc["page_content"],
+                **doc["metadata"]
             }
 
             points.append(

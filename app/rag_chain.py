@@ -21,12 +21,11 @@ def run_rag(query: str) -> str:
 
         logger.info("Running RAG for query: %s", query)
 
-        embedding_model, qdrant_client = get_runtime_dependencies()
+        qdrant_client = get_runtime_dependencies()
 
         docs = retrieve_context(
             query=query,
             qdrant_client=qdrant_client,
-            embedding_model=embedding_model,
             collection_name=QDRANT_COLLECTION,
             top_k=TOP_K,
             min_score=MIN_SCORE,
@@ -37,11 +36,7 @@ def run_rag(query: str) -> str:
             return "I don't know based on the available information."
 
         context = build_context(docs)
-
-        answer = generate_answer(
-            context=context,
-            question=query
-        )
+        answer = generate_answer(context=context, question=query)
 
         logger.info("RAG completed successfully")
         return answer
